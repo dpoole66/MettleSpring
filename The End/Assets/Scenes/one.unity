@@ -902,6 +902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StartButton: {fileID: 49138186}
   m_GameStateUI: {fileID: 817190093}
+  m_ARController: {fileID: 0}
   m_StageInstance: {fileID: 1032800304294652, guid: 92d9a87c0058b784e859732ec2f50963,
     type: 2}
   surfaceOffset: 0.1

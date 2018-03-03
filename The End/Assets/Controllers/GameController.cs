@@ -55,6 +55,9 @@ public class GameController : MonoBehaviour {
     private Text m_gameStateText;
     private Fade m_Fade;
 
+    //AR Components
+    //GameObject m_ARController;
+    //ARController m_aRcontroller;
 
     //Placement Components
     public GameObject m_StageInstance;
@@ -73,7 +76,9 @@ public class GameController : MonoBehaviour {
 
         m_gameStateText = m_GameStateUI.GetComponent<Text>();
         m_Fade = GameObject.Find("FadeBall").GetComponent<Fade>();
-        
+        //m_ARController = GameObject.Find("ARController");
+        //m_aRcontroller = m_ARController.GetComponent<ARController>();
+
         CurrentState = GAME_STATE.IDLE;         
 
     }
@@ -85,9 +90,9 @@ public class GameController : MonoBehaviour {
     }
 
 
-/// <summary>
-///   COROUTINES
-/// </summary>
+        /// <summary>
+        ///   COROUTINES
+        /// </summary>
 
     IEnumerator GameIdle() {
         //CurrentState = GAME_STATE.IDLE;
@@ -125,15 +130,18 @@ public class GameController : MonoBehaviour {
     }
 
     IEnumerator GameSetting() {
-       
+        
         Debug.Log(CurrentState);
         m_gameStateText.text = "Setting";
        // Input.ResetInputAxes();
 
         while (currentstate == GAME_STATE.SETTING) {
 
+            //Testing ARController access
+            //yield return StartCoroutine(m_aRcontroller.FeedBack());
             // SetRing sets the play space 
             yield return StartCoroutine(SetRing());
+            
 
          }
 
@@ -186,7 +194,8 @@ public class GameController : MonoBehaviour {
         while (currentstate == GAME_STATE.ENDING) {
 
             m_StartButton.SetActive(true);
- 
+            StartCoroutine(LoadStartScene());
+
             yield return null;
 
          }
@@ -224,6 +233,27 @@ public class GameController : MonoBehaviour {
         Debug.Log("I'm switching to SETTING");
         CurrentState = GAME_STATE.SETTING;
         yield break;  
+    }
+
+    // Coroutine to load Idle/Starting after game end
+    IEnumerator LoadStartScene() {
+
+        m_gameStateText.text = "Loading Scene";
+        Debug.Log("Loading Scene");
+
+        yield return StartCoroutine(Fade());
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("one");
+
+        while (!asyncLoad.isDone) {
+
+            yield return null;
+
+        }
+
+        Debug.Log("I'm switching to IDLE at game reset");
+        CurrentState = GAME_STATE.IDLE;
+        yield break;
     }
 
 
