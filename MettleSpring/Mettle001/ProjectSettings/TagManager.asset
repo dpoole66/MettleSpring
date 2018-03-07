@@ -22,6 +22,7 @@ TagManager:
   - enemySpawn
   - BattleRing
   - IAmGumBall
+  - PlaceRing
   layers:
   - Default
   - TransparentFX

@@ -7,12 +7,12 @@ public class PlayerPlacement : MonoBehaviour {
     public float surfaceOffset = 0.1f;
    // [HideInInspector]public GameObject m_PlayerInstance;
     public GameObject m_StageInstance;
-    public GameManager m_GameManager;
+    public GameManagerAR m_GameManagerAR;
     private GameObject m_PlayBall, m_GumBall;
 
 
     private void Start() {
-        m_GameManager = GameObject.Find("GameController"). GetComponent<GameManager>();
+        m_GameManagerAR = GameObject.Find("GameControllerAR"). GetComponent<GameManagerAR>();
         m_PlayBall = this.gameObject;
         m_PlayBall.SetActive(true);
 
@@ -46,7 +46,7 @@ public class PlayerPlacement : MonoBehaviour {
             m_GumBall.SetActive(true);
             this.gameObject.SetActive(false);
 
-            m_GameManager.SetGameRing(true);
+            m_GameManagerAR.StagePlaced = true;
 
         }
     }

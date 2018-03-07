@@ -301,9 +301,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Controllers\ARController.cs" />
+    <Compile Include="Assets\Controllers\ARControllerBasic.cs" />
     <Compile Include="Assets\Controllers\GameController.cs" />
     <Compile Include="Assets\Controllers\GameControllerAR.cs" />
+    <Compile Include="Assets\Controllers\GameControllerAR_01.cs" />
     <Compile Include="Assets\Controllers\GameControllerBasic.cs" />
+    <Compile Include="Assets\Controllers\SceneController.cs" />
+    <Compile Include="Assets\Controllers\StartController.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\ComputerVisionController.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\EdgeDetector.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\ComputerVision\Scripts\TextureReader.cs" />
@@ -393,6 +397,7 @@
     <Compile Include="Assets\ScriptsGeneral\DoNotDestroy.cs" />
     <Compile Include="Assets\ScriptsGeneral\Fade.cs" />
     <Compile Include="Assets\ScriptsGeneral\PlayerPlacement.cs" />
+    <Compile Include="Assets\ScriptsGeneral\StartButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GoogleARCore\Examples\ComputerVision\Materials\AREdgeDetectionBackground.shader" />

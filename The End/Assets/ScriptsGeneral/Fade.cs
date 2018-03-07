@@ -5,7 +5,7 @@ using UnityEngine;
 public class Fade : MonoBehaviour {
 
     public Texture2D fadeOutTex;
-    public float fadeSpeed = 3.0f;
+    public float fadeSpeed = 2.0f;
 
     private int drawDepth = -1000; // draw last to render on top
     private float alpha = 1.0f;

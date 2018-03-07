@@ -320,6 +320,7 @@
     <Compile Include="Assets\GameManagement\EnemyController\EnemyStats.cs" />
     <Compile Include="Assets\GameManagement\EnemyController\StateController.cs" />
     <Compile Include="Assets\GameManagement\Managers\GameManager.cs" />
+    <Compile Include="Assets\GameManagement\Managers\GameManagerAR.cs" />
     <Compile Include="Assets\GameManagement\Managers\KnightManager.cs" />
     <Compile Include="Assets\GameManagement\Managers\MettleAttacks.cs" />
     <Compile Include="Assets\GameManagement\Managers\MettleHealth.cs" />
