@@ -77,7 +77,7 @@ public class MettleManager {
         if (m_StateController != null)
             m_StateController.enabled = false;
 
-        m_Attacking.enabled = false;
+        //m_Attacking.enabled = false;
 
         m_CanvasGameObject.SetActive(false);
     }

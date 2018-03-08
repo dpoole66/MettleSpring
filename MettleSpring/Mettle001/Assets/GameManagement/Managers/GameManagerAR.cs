@@ -8,8 +8,8 @@ public class GameManagerAR : MonoBehaviour {
 
     public int m_NumRoundsToWin = 5;            // The number of rounds a single player has to win to win the game.
     public float m_StartDelay = 3f;             // The delay between the start of RoundStarting and RoundPlaying phases.
-    public float m_EndDelay = 3f;               // The delay between the end of RoundPlaying and RoundEnding phases.
-    public GameObject m_MessageTextUI;                  // Reference to the overlay Text to display winning text, etc.
+    public float m_EndDelay = 5f;               // The delay between the end of RoundPlaying and RoundEnding phases.
+    public GameObject m_MessageTextUI, m_Icon;                  // Reference to the overlay Text to display winning text, etc.
     public Text m_messageText;
     public GameObject[] m_MettlePrefabs;
     public MettleManager[] m_Mettles;               // A collection of managers for enabling and disabling different aspects of the tanks.
@@ -81,6 +81,7 @@ public class GameManagerAR : MonoBehaviour {
         //m_startButton.onClick.AddListener(StartInit);
 
         m_StartButton.SetActive(true);
+        m_Icon.SetActive(true);
  
         m_messageText.text = "Press Start to begin";
 
@@ -158,6 +159,7 @@ public class GameManagerAR : MonoBehaviour {
             m_PlaceRing.SetActive(false);
             m_GumBall.SetActive(false);
             m_StartButton.gameObject.SetActive(true);
+            m_Icon.SetActive(true);
 
             yield return null;
 
@@ -175,6 +177,8 @@ public class GameManagerAR : MonoBehaviour {
             m_messageText.text = "Tap to Place Tiger";
             Debug.Log("Game Setting Up");
             m_StartButton.gameObject.SetActive(false);
+            m_Icon.SetActive(false);
+            m_PlaceRing.SetActive(true);
 
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Stage002");
 
@@ -184,13 +188,14 @@ public class GameManagerAR : MonoBehaviour {
 
              }
 
-            m_PlaceRing.SetActive(true);    
-            m_StageInstance = GameObject.Find("BattleArea(Clone)");
-            Debug.Log(m_StageInstance);
-
             if (StagePlaced  == true) {
 
+                m_PlaceRing.SetActive(false);
+                m_messageText.text = "All Mettles Spawning";
+                yield return new WaitForSeconds(3);   
+                Debug.Log("Stage is Placed and now switching to STARTING");
                 CurrentState = GAME_STATE.STARTING;
+                yield break;
 
             }
 
@@ -203,25 +208,31 @@ public class GameManagerAR : MonoBehaviour {
     private IEnumerator RoundStarting() {
 
         while (currentstate == GAME_STATE.STARTING) {
-
+            
             m_messageText.text = "Round Starting";
             Debug.Log("top of RoundStarting");
 
             // As soon as the round starts reset the Mettles and make sure they can't move.
             if (m_StageInstance != null) {
+
+                Debug.Log("I found the stage and now I'm spawning");
                 SpawnAllMettles();
                 ResetAllMettles();
                 DisableMettleControl();
-                Debug.Log("I found the stage and now I'm spawning");
+                yield return new WaitForSeconds(3);      
+                
             }
-            // Increment the round number and display text showing the players what round it is.
-            m_RoundNumber++;
-            m_messageText.text = "ROUND " + m_RoundNumber;
 
             // Wait for the specified length of time until yielding control back to the STATE MACHINE.
             yield return m_EndWait;
-            Debug.Log("END of RoundStarting");
 
+            Debug.Log("Activating GumBall, Setting Round");
+            m_GumBall.SetActive(true);
+
+            // Increment the round number and display text showing the players what round it is.
+            m_RoundNumber++;
+            m_messageText.text = "ROUND " + m_RoundNumber;
+    
             CurrentState = GAME_STATE.PLAYING;
 
          }
@@ -230,17 +241,21 @@ public class GameManagerAR : MonoBehaviour {
 
 
     private IEnumerator RoundPlaying() {
-        // As soon as the round begins playing let the players control the tanks.
-        EnableMettleControl();
-   
-        // Clear the text from the screen.
-        m_messageText.text = string.Empty;
 
-        // While there is not one tank left...
-        while (!OneMettleLeft()) {
-            // ... return on the next frame.
-            yield return null;
-         }
+        while (currentstate == GAME_STATE.PLAYING) {
+            // As soon as the round begins playing let the players control the tanks.
+            EnableMettleControl();
+
+            // Clear the text from the screen.
+            m_messageText.text = string.Empty;
+    
+            // While there is not one tank left...
+            while (!OneMettleLeft()) {
+                // ... return on the next frame.
+                yield return null;
+            }
+
+        }
     }
 
 
@@ -293,7 +308,7 @@ public class GameManagerAR : MonoBehaviour {
         m_Mettles[0].m_PlayerNumber = 1;
         m_Mettles[0].SetupPlayerMettle();
 
-        // Setup the AI tanks
+        // Setup the AI Mettle
         for (int i = 1; i < m_Mettles.Length; i++) {
             // ... create them, set their player number and references needed for control.
             m_Mettles[i].m_MettleInstance =

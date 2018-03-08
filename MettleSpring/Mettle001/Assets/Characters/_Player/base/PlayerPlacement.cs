@@ -8,7 +8,7 @@ public class PlayerPlacement : MonoBehaviour {
    // [HideInInspector]public GameObject m_PlayerInstance;
     public GameObject m_StageInstance;
     public GameManagerAR m_GameManagerAR;
-    private GameObject m_PlayBall, m_GumBall;
+    private GameObject m_PlayBall, m_GumBall, m_Floor;
 
 
     private void Start() {
@@ -17,8 +17,7 @@ public class PlayerPlacement : MonoBehaviour {
         m_PlayBall.SetActive(true);
 
         m_GumBall = GameObject.FindGameObjectWithTag("IAmGumBall");
-        m_GumBall.SetActive(false);
-
+        m_GumBall.SetActive(false);                              
     }
 
     public void Update() {
@@ -42,11 +41,11 @@ public class PlayerPlacement : MonoBehaviour {
         if ((m_StageInstance != null) && (hit.transform.gameObject.tag == "Ground")) {
             
             var m_stageInstance = Instantiate(m_StageInstance, hit.point, Quaternion.identity);
-            
-            m_GumBall.SetActive(true);
-            this.gameObject.SetActive(false);
 
+            this.gameObject.SetActive(false);
             m_GameManagerAR.StagePlaced = true;
+
+            Debug.Log(m_stageInstance);
 
         }
     }

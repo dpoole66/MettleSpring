@@ -8,8 +8,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     public class AICharacterControl : MonoBehaviour
     {
         public UnityEngine.AI.NavMeshAgent agent { get; private set; }             // the navmesh agent required for the path finding
-        public ThirdPersonCharacter character { get; private set; } // the character we are controlling
-        public Transform target;                                    // target to aim for
+        public ThirdPersonCharacter character { get; private set; } // the character we are controlling     
+        public Transform target;
 
 
         private void Start()
@@ -18,7 +18,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             agent = GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
             character = GetComponent<ThirdPersonCharacter>();
 
-            target = GameObject.Find("GumBall").GetComponent<Transform>() ;             // **
+            Transform target = GameObject.Find("GumBall").GetComponent<Transform>();             // **
             Debug.Log(target);
 
             agent.enabled = true;

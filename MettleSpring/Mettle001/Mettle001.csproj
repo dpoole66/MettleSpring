@@ -332,6 +332,7 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\Scripts\_debug\DrawSightLine.cs" />
     <Compile Include="Assets\Scripts\Audio\NPC_Audio.cs" />
+    <Compile Include="Assets\Scripts\Fade.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

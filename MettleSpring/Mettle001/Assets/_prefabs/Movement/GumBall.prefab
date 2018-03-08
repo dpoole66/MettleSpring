@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfaceOffset: 0.1
-  MoveTarget: {fileID: 1127853141656354}
+  MoveTarget: {fileID: 1980998867653254, guid: 715f8bc253607c14db7bff6b1dc241ff, type: 2}
 --- !u!114 &114772192117776686
 MonoBehaviour:
   m_ObjectHideFlags: 1
