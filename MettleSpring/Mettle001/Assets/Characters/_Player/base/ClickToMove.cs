@@ -5,21 +5,28 @@ using UnityEngine;
 public class ClickToMove : MonoBehaviour {
 
     public float surfaceOffset = -0.1f;
-    public GameObject MoveTarget;
+    public GameObject _movePlayer;
+
 
     private void Update() {
+
+        //_movePlayer = GameObject.Find("MettlePlayerOne(Clone)");
+
         if (!Input.GetMouseButtonDown(0)) {
             return;
         }
+
+        _movePlayer = GameObject.Find("MettlePlayerOne(Clone)");
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (!Physics.Raycast(ray, out hit)) {
             return;
         }
         transform.position = hit.point + hit.normal * surfaceOffset;
-        if ((MoveTarget != null) && (hit.transform.gameObject.tag == "Ground")) {
-            MoveTarget.SendMessage("SetTarget", transform);
-            //Debug.Log("GumBall's active again");
+        if ((_movePlayer != null) && (hit.transform.gameObject.tag == "Ground")) {
+            _movePlayer.SendMessage("SetTarget", transform);
+            Debug.Log(_movePlayer);
         }
     }
 }

@@ -27,7 +27,7 @@ public class MettleManager {
         m_StateController = m_MettleInstance.GetComponent<StateController>();
         m_StateController.SetupAI(true, wayPointList);
 
-        MettleAttacks m_Attacking = m_MettleInstance.GetComponent<MettleAttacks>();
+        m_Attacking = m_MettleInstance.GetComponent<MettleAttacks>();
         m_Attacking.m_PlayerNumber = m_PlayerNumber;
 
         m_CanvasGameObject = m_MettleInstance.GetComponentInChildren<Canvas>().gameObject;
@@ -54,7 +54,7 @@ public class MettleManager {
 
         // Set the player numbers to be consistent across the scripts.
         m_Movement.m_PlayerNumber = m_PlayerNumber;
-       // m_Shooting.m_PlayerNumber = m_PlayerNumber;
+        m_Attacking.m_PlayerNumber = m_PlayerNumber;
 
         // Create a string using the correct color that says 'PLAYER 1' etc based on the tank's color and the player's number.
         m_ColoredPlayerText = "<color=#" + ColorUtility.ToHtmlStringRGB(m_PlayerColor) + ">PLAYER " + m_PlayerNumber + "</color>";
@@ -77,7 +77,7 @@ public class MettleManager {
         if (m_StateController != null)
             m_StateController.enabled = false;
 
-        //m_Attacking.enabled = false;
+        m_Attacking.enabled = false;
 
         m_CanvasGameObject.SetActive(false);
     }

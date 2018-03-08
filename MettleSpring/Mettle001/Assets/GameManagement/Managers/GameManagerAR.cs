@@ -156,6 +156,7 @@ public class GameManagerAR : MonoBehaviour {
 
 
             Debug.Log("Game Idle");
+            m_messageText.text = "Mettle Machines: Start to Begin";
             m_PlaceRing.SetActive(false);
             m_GumBall.SetActive(false);
             m_StartButton.gameObject.SetActive(true);
@@ -219,27 +220,27 @@ public class GameManagerAR : MonoBehaviour {
                 SpawnAllMettles();
                 ResetAllMettles();
                 DisableMettleControl();
-                yield return new WaitForSeconds(3);      
+                //yield return new WaitForSeconds(3);      
                 
             }
 
             // Wait for the specified length of time until yielding control back to the STATE MACHINE.
             yield return m_EndWait;
 
-            Debug.Log("Activating GumBall, Setting Round");
-            m_GumBall.SetActive(true);
-
             // Increment the round number and display text showing the players what round it is.
             m_RoundNumber++;
             m_messageText.text = "ROUND " + m_RoundNumber;
-    
+
+            Debug.Log("Activating GumBall, Setting Round");
+            m_GumBall.SetActive(true);
+
             CurrentState = GAME_STATE.PLAYING;
 
          }
 
     }
 
-
+     // ROUND PLAYING
     private IEnumerator RoundPlaying() {
 
         while (currentstate == GAME_STATE.PLAYING) {
@@ -247,41 +248,57 @@ public class GameManagerAR : MonoBehaviour {
             EnableMettleControl();
 
             // Clear the text from the screen.
-            m_messageText.text = string.Empty;
-    
+            m_messageText.text = "ROUND " + m_RoundNumber;
+
             // While there is not one tank left...
             while (!OneMettleLeft()) {
                 // ... return on the next frame.
                 yield return null;
-            }
+             }
+
+            CurrentState = GAME_STATE.ENDING;
 
         }
     }
 
-
+     // ROUND ENDING
     private IEnumerator RoundEnding() {
-        // Stop tanks from moving.
-        DisableMettleControl();
 
-        // Clear the winner from the previous round.
-        m_RoundWinner = null;
+        while (currentstate == GAME_STATE.ENDING) {
+            // Stop Mettles from moving.
+            DisableMettleControl();
 
-        // See if there is a winner now the round is over.
-        m_RoundWinner = GetRoundWinner();
+            // Clear the winner from the previous round.
+            m_RoundWinner = null;
 
-        // If there is a winner, increment their score.
-        if (m_RoundWinner != null)
-            m_RoundWinner.m_Wins++;
+            // See if there is a winner now the round is over.
+            m_RoundWinner = GetRoundWinner();
 
-        // Now the winner's score has been incremented, see if someone has one the game.
-        m_GameWinner = GetGameWinner();
+            // If there is a winner, increment their score.
+            if (m_RoundWinner != null)
+                m_RoundWinner.m_Wins++;
 
-        // Get a message based on the scores and whether or not there is a game winner and display it.
-        string message = EndMessage();
-        m_messageText.text = message;
+            // Now the winner's score has been incremented, see if someone has one the game.
+            m_GameWinner = GetGameWinner();
 
-        // Wait for the specified length of time until yielding control back to the game loop.
-        yield return m_EndWait;
+            // Get a message based on the scores and whether or not there is a game winner and display it.
+            string message = EndMessage();
+            m_messageText.text = message;
+
+            // Wait for the specified length of time until yielding control back to the game loop.
+            yield return m_EndWait;
+
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Stage001");
+
+            while (!asyncLoad.isDone) {
+
+                yield return null;
+
+            }
+
+            CurrentState = GAME_STATE.IDLE;
+
+        }
     }
 
     //Methods  within loop
