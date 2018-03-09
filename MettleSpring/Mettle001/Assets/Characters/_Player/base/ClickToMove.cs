@@ -16,7 +16,7 @@ public class ClickToMove : MonoBehaviour {
             return;
         }
 
-        _movePlayer = GameObject.Find("MettlePlayerOne(Clone)");
+        _movePlayer = GameObject.FindGameObjectWithTag("Player");
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;

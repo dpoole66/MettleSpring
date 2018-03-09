@@ -8,14 +8,14 @@ public class MettleManager {
 
     public Color m_PlayerColor;                             // This is the color this tank will be tinted.
     public GameObject m_SpawnPoint;                          // The position and direction the tank will have when it spawns.
-    [HideInInspector] public int m_PlayerNumber;            // This specifies which player this the manager for.
+    [HideInInspector] public int m_MettleNumber;            // This specifies which player this the manager for.
     [HideInInspector] public string m_ColoredPlayerText;    // A string that represents the player with their number colored to match their tank.
     [HideInInspector] public GameObject m_MettleInstance;         // A reference to the instance of the tank when it is created.
     [HideInInspector] public int m_Wins;                    // The number of wins this player has so far.
     [HideInInspector] public List<Transform> m_WayPointList;
 
     private MettleMovement m_Movement;                        // Reference to tank's movement script, used to disable and enable control.
-    private MettleAttacks m_Attacking;                        // Reference to tank's shooting script, used to disable and enable control.
+    private MettleAttack m_Attacking;                        // Reference to tank's shooting script, used to disable and enable control.
     private MettleHealth m_Health;
     private GameObject m_CanvasGameObject;                  // Used to disable the world space UI during the Starting and Ending phases of each round.
     private StateController m_StateController;	              //Enemy Mettle AI;
@@ -27,11 +27,11 @@ public class MettleManager {
         m_StateController = m_MettleInstance.GetComponent<StateController>();
         m_StateController.SetupAI(true, wayPointList);
 
-        m_Attacking = m_MettleInstance.GetComponent<MettleAttacks>();
-        m_Attacking.m_PlayerNumber = m_PlayerNumber;
+        m_Attacking = m_MettleInstance.GetComponent<MettleAttack>();
+        m_Attacking.m_MettleNumber = m_MettleNumber;
 
         m_CanvasGameObject = m_MettleInstance.GetComponentInChildren<Canvas>().gameObject;
-        m_ColoredPlayerText = "<color=#" + ColorUtility.ToHtmlStringRGB(m_PlayerColor) + ">PLAYER " + m_PlayerNumber + "</color>";
+        m_ColoredPlayerText = "<color=#" + ColorUtility.ToHtmlStringRGB(m_PlayerColor) + ">PLAYER " + m_MettleNumber + "</color>";
 
         // Get all of the renderers of the tank.
         MeshRenderer[] renderers = m_MettleInstance.GetComponentsInChildren<MeshRenderer>();
@@ -48,16 +48,16 @@ public class MettleManager {
         m_SpawnPoint = GameObject.FindGameObjectWithTag("playerSpawn");
 
         m_Movement = m_MettleInstance.GetComponent<MettleMovement>();
-        m_Attacking = m_MettleInstance.GetComponent<MettleAttacks>();
+        m_Attacking = m_MettleInstance.GetComponent<MettleAttack>();
         m_Health = m_MettleInstance.GetComponent<MettleHealth>();
         m_CanvasGameObject = m_MettleInstance.GetComponentInChildren<Canvas>().gameObject;
 
         // Set the player numbers to be consistent across the scripts.
-        m_Movement.m_PlayerNumber = m_PlayerNumber;
-        m_Attacking.m_PlayerNumber = m_PlayerNumber;
+        m_Movement.m_MettleNumber = m_MettleNumber;
+        m_Attacking.m_MettleNumber = m_MettleNumber;
 
         // Create a string using the correct color that says 'PLAYER 1' etc based on the tank's color and the player's number.
-        m_ColoredPlayerText = "<color=#" + ColorUtility.ToHtmlStringRGB(m_PlayerColor) + ">PLAYER " + m_PlayerNumber + "</color>";
+        m_ColoredPlayerText = "<color=#" + ColorUtility.ToHtmlStringRGB(m_PlayerColor) + ">PLAYER " + m_MettleNumber + "</color>";
 
         // Get all of the renderers of the tank.
         MeshRenderer[] renderers = m_MettleInstance.GetComponentsInChildren<MeshRenderer>();

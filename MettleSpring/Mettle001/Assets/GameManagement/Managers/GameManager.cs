@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour {
         m_Mettles[0].m_MettleInstance =
             Instantiate(m_MettlePrefabs[0], m_Mettles[0].m_SpawnPoint.transform.position, 
             m_Mettles[0].m_SpawnPoint.transform.rotation) as GameObject;
-        m_Mettles[0].m_PlayerNumber = 1;
+        m_Mettles[0].m_MettleNumber = 1;
         m_Mettles[0].SetupPlayerMettle();
 
         // Setup the AI tanks
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour {
             m_Mettles[i].m_MettleInstance =
                 Instantiate(m_MettlePrefabs[i], m_Mettles[i].m_SpawnPoint.transform.position, 
                 m_Mettles[i].m_SpawnPoint.transform.rotation) as GameObject;
-            m_Mettles[i].m_PlayerNumber = i + 1;
+            m_Mettles[i].m_MettleNumber = i + 1;
             m_Mettles[i].SetupAI(wayPointsForAI);
         }
     }

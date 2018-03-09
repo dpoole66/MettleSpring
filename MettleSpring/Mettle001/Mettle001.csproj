@@ -306,11 +306,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Characters\_Player\AIMettleControl.cs" />
     <Compile Include="Assets\Characters\_Player\base\ClickToMove.cs" />
     <Compile Include="Assets\Characters\_Player\base\PlayerCharacter.cs" />
-    <Compile Include="Assets\Characters\_Player\base\PlayerController.cs" />
-    <Compile Include="Assets\Characters\_Player\base\PlayerMovement.cs" />
-    <Compile Include="Assets\Characters\_Player\base\PlayerPlacement.cs" />
+    <Compile Include="Assets\Characters\_Player\PlayerController.cs" />
+    <Compile Include="Assets\Characters\_Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Characters\_Player\PlayerPlacement.cs" />
     <Compile Include="Assets\Characters\_Universal\_basicScripts\DetectHit.cs" />
     <Compile Include="Assets\Characters\_Universal\_basicScripts\DetectHitShield.cs" />
     <Compile Include="Assets\Characters\_Universal\_basicScripts\LookAtEnemy.cs" />
@@ -323,7 +324,7 @@
     <Compile Include="Assets\GameManagement\Managers\GameManager.cs" />
     <Compile Include="Assets\GameManagement\Managers\GameManagerAR.cs" />
     <Compile Include="Assets\GameManagement\Managers\KnightManager.cs" />
-    <Compile Include="Assets\GameManagement\Managers\MettleAttacks.cs" />
+    <Compile Include="Assets\GameManagement\Managers\MettleAttack.cs" />
     <Compile Include="Assets\GameManagement\Managers\MettleHealth.cs" />
     <Compile Include="Assets\GameManagement\Managers\MettleManager.cs" />
     <Compile Include="Assets\GameManagement\Managers\MettleMovement.cs" />

@@ -1337,13 +1337,12 @@ GameObject:
   - component: {fileID: 195135076240578514}
   - component: {fileID: 82884104109604796}
   - component: {fileID: 82125288686876152}
-  - component: {fileID: 114541425496362744}
   - component: {fileID: 114265135883051356}
-  - component: {fileID: 114644441356982582}
-  - component: {fileID: 114843798732357152}
-  - component: {fileID: 114145854385748822}
-  - component: {fileID: 114951944403884430}
-  - component: {fileID: 114818709594118876}
+  - component: {fileID: 114731102068062576}
+  - component: {fileID: 114637262193726434}
+  - component: {fileID: 114834622035910964}
+  - component: {fileID: 114996014666665292}
+  - component: {fileID: 114990063462993406}
   m_Layer: 0
   m_Name: MettlePlayerOne
   m_TagString: Player
@@ -2719,7 +2718,7 @@ Animator:
   m_GameObject: {fileID: 1980998867653254}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 85a6761b776984a4587f8c3b6fc1763f, type: 3}
-  m_Controller: {fileID: 9100000, guid: c16e0ed857d4a5b408c5661485ff9a99, type: 2}
+  m_Controller: {fileID: 9100000, guid: aa06af93faf8b0a48aa1ea185dfeb7a8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2754,18 +2753,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114145854385748822
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980998867653254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5335f0882fe4d478883cc8c58ce906, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 4274743932355304}
 --- !u!114 &114151388648736624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2834,6 +2821,7 @@ MonoBehaviour:
   m_StaminaSlider: {fileID: 114151388648736624}
   m_StaminaFillImage: {fileID: 114386133825472082}
   m_ExplosionPrefab: {fileID: 151086, guid: a917b7fd47c931544823fbe15b590812, type: 2}
+  m_Dead: 0
 --- !u!114 &114292166805976698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2957,7 +2945,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114541425496362744
+--- !u!114 &114637262193726434
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2968,14 +2956,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204c0ffc9f02350468802d76650104f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerNumber: 1
+  m_MettleNumber: 1
   m_Speed: 12
   m_TurnSpeed: 180
   m_MovementAudio: {fileID: 82884104109604796}
-  m_EngineIdling: {fileID: 8300000, guid: d1c5b647ae7c5ba4083cae5a8b4ff168, type: 3}
-  m_EngineDriving: {fileID: 8300000, guid: 8d0d659d540b5264cad688f0e6bdf2ba, type: 3}
+  m_EngineIdling: {fileID: 8300000, guid: 8d0d659d540b5264cad688f0e6bdf2ba, type: 3}
+  m_EngineDriving: {fileID: 8300000, guid: d1c5b647ae7c5ba4083cae5a8b4ff168, type: 3}
   m_PitchRange: 0.2
---- !u!114 &114644441356982582
+--- !u!114 &114731102068062576
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2983,13 +2971,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1980998867653254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56386f4aecb165547a40b334e41ed98d, type: 3}
+  m_Script: {fileID: 11500000, guid: bfe9eaaee4e40234d9bf76702515a8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerNumber: 1
+  m_MettleNumber: 1
   m_AttackAudio: {fileID: 82884104109604796}
   m_WieldingClip: {fileID: 8300000, guid: 72202fb57f3f4c247828d2b34cf8590b, type: 3}
-  m_AttackClip: {fileID: 8300000, guid: fae1c5134d14aad49962d7c7459ed27b, type: 3}
+  m_AttackClip: {fileID: 8300000, guid: 73be2296cacbe55449b4fcb9ac3e23c2, type: 3}
   m_MinAttackForce: 15
   m_MaxAttackForce: 30
   m_MaxWieldingTime: 0.75
@@ -3020,7 +3008,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 0
   m_FillOrigin: 2
---- !u!114 &114818709594118876
+--- !u!114 &114834622035910964
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -3028,30 +3016,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1980998867653254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35e3a673d7d776a42a587f25d3c3dde3, type: 3}
+  m_Script: {fileID: 11500000, guid: 86efc8150056daa4693cad92eb9e4eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surfaceOffset: 0.01
-  currentState: 0
---- !u!114 &114843798732357152
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980998867653254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 180
-  m_JumpPower: 12
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 0.3
+  m_Opponent: EnemySword
 --- !u!114 &114929790652899500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3068,7 +3036,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114951944403884430
+--- !u!114 &114990063462993406
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -3076,10 +3044,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1980998867653254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86efc8150056daa4693cad92eb9e4eea, type: 3}
+  m_Script: {fileID: 11500000, guid: c2b30e745aa6cee46858610c36f0f91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Opponent: EnemySword
+  m_MettleNumber: 1
+  m_Enemy: {fileID: 0}
+  m_Anim: {fileID: 0}
+--- !u!114 &114996014666665292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1980998867653254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e3a673d7d776a42a587f25d3c3dde3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceOffset: 0.01
+  currentState: 0
 --- !u!136 &136152785593126278
 CapsuleCollider:
   m_ObjectHideFlags: 1

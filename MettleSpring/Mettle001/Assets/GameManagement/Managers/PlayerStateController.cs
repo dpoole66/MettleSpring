@@ -13,7 +13,7 @@ public class PlayerStateController : MonoBehaviour {
     Animator m_Anim;
     GameObject m_Enemy, m_Player;
     Transform m_EnemyPosition;  
-    MettleAttacks m_PlayerAttack;
+    MettleAttack m_PlayerAttack;
     float enemyRange;
     Vector3 enemyHeading;
     // Movement
@@ -36,8 +36,9 @@ public class PlayerStateController : MonoBehaviour {
 
         m_Enemy = GameObject.FindWithTag("Enemy");
         m_Player = GameObject.FindWithTag("Player");
+
         m_EnemyPosition = m_Enemy.transform; 
-        m_PlayerAttack = GetComponent<MettleAttacks>();
+        m_PlayerAttack = GetComponent<MettleAttack>();
 
         if (m_Enemy != null){
 
@@ -46,6 +47,8 @@ public class PlayerStateController : MonoBehaviour {
         }
 
     }
+
+    
 
     public void SetUpPlayerMettle(bool aiActivationFromMettleManager) {        //**
 

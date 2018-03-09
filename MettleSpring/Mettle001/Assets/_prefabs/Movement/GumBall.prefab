@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4533760050314792}
-  - component: {fileID: 114264690217878852}
   - component: {fileID: 114774244339006580}
+  - component: {fileID: 114337471527477388}
   m_Layer: 0
   m_Name: GumBall
   m_TagString: IAmGumBall
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114264690217878852
+--- !u!114 &114337471527477388
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -126,7 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfaceOffset: 0.1
-  MoveTarget: {fileID: 1980998867653254, guid: 715f8bc253607c14db7bff6b1dc241ff, type: 2}
+  _movePlayer: {fileID: 1980998867653254, guid: 715f8bc253607c14db7bff6b1dc241ff,
+    type: 2}
 --- !u!114 &114772192117776686
 MonoBehaviour:
   m_ObjectHideFlags: 1

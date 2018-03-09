@@ -78,8 +78,8 @@ public class GameManagerAR : MonoBehaviour {
 
         m_messageText = m_MessageTextUI.GetComponent<Text>();
         Button m_startButton = m_StartButton.GetComponent<Button>();
-        //m_startButton.onClick.AddListener(StartInit);
-
+       
+        m_GumBall.SetActive(true);    
         m_StartButton.SetActive(true);
         m_Icon.SetActive(true);
  
@@ -152,8 +152,8 @@ public class GameManagerAR : MonoBehaviour {
 
                 m_PlaceRing.SetActive(false);
                 m_messageText.text = "All Mettles Spawning";
-                yield return new WaitForSeconds(3);   
-                Debug.Log("Stage is Placed and now switching to STARTING");
+                Debug.Log("Spawning");
+                SpawnAllMettles();
                 CurrentState = GAME_STATE.STARTING;
                 yield break;
 
@@ -171,17 +171,9 @@ public class GameManagerAR : MonoBehaviour {
             
             m_messageText.text = "Round Starting";
             Debug.Log("top of RoundStarting");
-
-            // As soon as the round starts reset the Mettles and make sure they can't move.
-            if (m_StageInstance != null) {
-
-                Debug.Log("I found the stage and now I'm spawning");
-                SpawnAllMettles();
-                ResetAllMettles();
-                DisableMettleControl();
-                //yield return new WaitForSeconds(3);      
-                
-            }
+   
+            ResetAllMettles();
+            DisableMettleControl();
 
             // Wait for the specified length of time until yielding control back to the STATE MACHINE.
             yield return m_EndWait;
@@ -237,27 +229,23 @@ public class GameManagerAR : MonoBehaviour {
             if (m_RoundWinner != null)
                 m_RoundWinner.m_Wins++;
 
-            // Now the winner's score has been incremented, see if someone has one the game.
-            m_GameWinner = GetGameWinner();
-
             // Get a message based on the scores and whether or not there is a game winner and display it.
             string message = EndMessage();
             m_messageText.text = message;
 
+            // Now the winner's score has been incremented, see if someone has wne the game.
+            m_GameWinner = GetGameWinner();
+
             // Wait for the specified length of time until yielding control back to the game loop.
             yield return m_EndWait;
 
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Stage001");
+            if (m_GameWinner != null) {
 
-            while (!asyncLoad.isDone) {
- 
-                yield return null;
+                CurrentState = GAME_STATE.SETUP;
 
-             }
+            } else  CurrentState = GAME_STATE.STARTING;
 
-            CurrentState = GAME_STATE.IDLE;
-
-         }
+        }
     }
 
     //Methods  within loop
@@ -281,7 +269,7 @@ public class GameManagerAR : MonoBehaviour {
         m_Mettles[0].m_MettleInstance =
             Instantiate(m_MettlePrefabs[0], m_Mettles[0].m_SpawnPoint.transform.position,
             m_Mettles[0].m_SpawnPoint.transform.rotation) as GameObject;
-        m_Mettles[0].m_PlayerNumber = 1;
+        m_Mettles[0].m_MettleNumber = 1;
         m_Mettles[0].SetupPlayerMettle();
 
         // Setup the AI Mettle
@@ -290,7 +278,7 @@ public class GameManagerAR : MonoBehaviour {
             m_Mettles[i].m_MettleInstance =
                 Instantiate(m_MettlePrefabs[i], m_Mettles[i].m_SpawnPoint.transform.position,
                 m_Mettles[i].m_SpawnPoint.transform.rotation) as GameObject;
-            m_Mettles[i].m_PlayerNumber = i + 1;
+            m_Mettles[i].m_MettleNumber = i + 1;
             m_Mettles[i].SetupAI(wayPointsForAI);
         }
     }
@@ -337,7 +325,7 @@ public class GameManagerAR : MonoBehaviour {
                 return m_Mettles[i];
         }
 
-        // If no tanks have enough rounds to win, return null.
+        // If no mettles have enough rounds to win, return null.
         return null;
     }
 
@@ -361,7 +349,9 @@ public class GameManagerAR : MonoBehaviour {
 
         // If there is a game winner, change the entire message to reflect that.
         if (m_GameWinner != null)
+
             message = m_GameWinner.m_ColoredPlayerText + " WINS THE GAME!";
+            
 
         return message;
     }

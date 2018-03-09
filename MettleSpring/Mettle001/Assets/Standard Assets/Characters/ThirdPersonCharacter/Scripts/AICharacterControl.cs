@@ -18,7 +18,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             agent = GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
             character = GetComponent<ThirdPersonCharacter>();
 
-            Transform target = GameObject.Find("GumBall").GetComponent<Transform>();             // **
+            Transform target = GameObject.Find("GumBall").GetComponent<Transform>();         
             Debug.Log(target);
 
             agent.enabled = true;

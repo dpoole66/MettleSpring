@@ -1158,14 +1158,14 @@ GameObject:
   - component: {fileID: 82615185894309164}
   - component: {fileID: 82010041736180246}
   - component: {fileID: 114260886037820234}
+  - component: {fileID: 114592670105145102}
   - component: {fileID: 114080639175157874}
-  - component: {fileID: 114551545423462052}
   - component: {fileID: 114902596269560174}
   - component: {fileID: 114152189089966190}
   m_Layer: 0
   m_Name: MettleEnemyOne
   m_TagString: Enemy
-  m_Icon: {fileID: -982381405332843317, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 8220585740371884164, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2820,6 +2820,7 @@ MonoBehaviour:
   m_StaminaSlider: {fileID: 114441846119276288}
   m_StaminaFillImage: {fileID: 114031626884639236}
   m_ExplosionPrefab: {fileID: 151086, guid: a917b7fd47c931544823fbe15b590812, type: 2}
+  m_Dead: 1
 --- !u!114 &114152189089966190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2870,7 +2871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204c0ffc9f02350468802d76650104f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerNumber: 1
+  m_MettleNumber: 2
   m_Speed: 12
   m_TurnSpeed: 180
   m_MovementAudio: {fileID: 82615185894309164}
@@ -2946,7 +2947,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114551545423462052
+--- !u!114 &114592670105145102
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2954,13 +2955,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1827437036863322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56386f4aecb165547a40b334e41ed98d, type: 3}
+  m_Script: {fileID: 11500000, guid: bfe9eaaee4e40234d9bf76702515a8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerNumber: 1
+  m_MettleNumber: 1
   m_AttackAudio: {fileID: 82615185894309164}
   m_WieldingClip: {fileID: 8300000, guid: 72202fb57f3f4c247828d2b34cf8590b, type: 3}
-  m_AttackClip: {fileID: 8300000, guid: 94573e4ec275e9142b8baeecea9afe78, type: 3}
+  m_AttackClip: {fileID: 8300000, guid: fae1c5134d14aad49962d7c7459ed27b, type: 3}
   m_MinAttackForce: 15
   m_MaxAttackForce: 30
   m_MaxWieldingTime: 0.75
