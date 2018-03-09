@@ -315,6 +315,7 @@
     <Compile Include="Assets\Characters\_Universal\_basicScripts\DetectHitShield.cs" />
     <Compile Include="Assets\Characters\_Universal\_basicScripts\LookAtEnemy.cs" />
     <Compile Include="Assets\Characters\_Universal\DoNotDestroy.cs" />
+    <Compile Include="Assets\Characters\_Universal\MettleHit.cs" />
     <Compile Include="Assets\Characters\Controllers\MettleCharacter.cs" />
     <Compile Include="Assets\EnemyUI.cs" />
     <Compile Include="Assets\GameManagement\EnemyController\EnemyStats.cs" />
@@ -326,6 +327,7 @@
     <Compile Include="Assets\GameManagement\Managers\MettleHealth.cs" />
     <Compile Include="Assets\GameManagement\Managers\MettleManager.cs" />
     <Compile Include="Assets\GameManagement\Managers\MettleMovement.cs" />
+    <Compile Include="Assets\GameManagement\Managers\PlayerStateController.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />

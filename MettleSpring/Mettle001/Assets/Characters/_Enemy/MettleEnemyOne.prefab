@@ -1161,6 +1161,7 @@ GameObject:
   - component: {fileID: 114080639175157874}
   - component: {fileID: 114551545423462052}
   - component: {fileID: 114902596269560174}
+  - component: {fileID: 114152189089966190}
   m_Layer: 0
   m_Name: MettleEnemyOne
   m_TagString: Enemy
@@ -2812,13 +2813,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StartingHealth: 100
   m_StartingStamina: 100
-  m_Slider: {fileID: 114018987142859468}
+  m_HealthSlider: {fileID: 114018987142859468}
   m_FillImage: {fileID: 114195632290475108}
   m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
   m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
   m_StaminaSlider: {fileID: 114441846119276288}
   m_StaminaFillImage: {fileID: 114031626884639236}
   m_ExplosionPrefab: {fileID: 151086, guid: a917b7fd47c931544823fbe15b590812, type: 2}
+--- !u!114 &114152189089966190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1827437036863322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86efc8150056daa4693cad92eb9e4eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Opponent: PlayerSword
 --- !u!114 &114195632290475108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2945,12 +2958,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerNumber: 1
-  m_AttackingAudio: {fileID: 82615185894309164}
-  m_ChargingClip: {fileID: 8300000, guid: 72202fb57f3f4c247828d2b34cf8590b, type: 3}
+  m_AttackAudio: {fileID: 82615185894309164}
+  m_WieldingClip: {fileID: 8300000, guid: 72202fb57f3f4c247828d2b34cf8590b, type: 3}
   m_AttackClip: {fileID: 8300000, guid: 94573e4ec275e9142b8baeecea9afe78, type: 3}
   m_MinAttackForce: 15
   m_MaxAttackForce: 30
-  m_MaxChargeTime: 0.75
+  m_MaxWieldingTime: 0.75
 --- !u!114 &114651595777327584
 MonoBehaviour:
   m_ObjectHideFlags: 1

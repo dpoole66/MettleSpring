@@ -89,49 +89,7 @@ public class GameManagerAR : MonoBehaviour {
 
     }
 
-
-
-    private IEnumerator PlaceTiger() {
-
-        yield return m_StartWait;
-        Debug.Log("PlaceTiger() running");
-        m_messageText.text = "Tap to place Tiger";
-
-        while (true) {
-            if (!Input.GetMouseButtonDown(0)) {
-
-                yield return null;
-
-            }
-
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (!Physics.Raycast(ray, out hit)) {
-
-                yield return null;
-            }
-
-            transform.position = hit.point + hit.normal * surfaceOffset;
-
-            if ((m_StageInstance == null) && (hit.transform.gameObject.tag == "Ground")) {
-
-                var m_stageInstance = Instantiate(m_StageInstance, hit.point, Quaternion.identity);
-
-                yield return null;
-
-                if (m_stageInstance != null) {
-
-                    yield break;
-
-                }
-
-            }           
-            Debug.Log("At the Bottom of PlaceTiger()");
-            StartCoroutine(RoundStarting());
-         }
-    }
-
+  
     // Start Button in IDLE
     public void StartButton() {
 
@@ -185,6 +143,7 @@ public class GameManagerAR : MonoBehaviour {
 
             while (!asyncLoad.isDone) {
 
+                yield return new WaitForSeconds(3);
                 yield return null;
 
              }
@@ -291,14 +250,14 @@ public class GameManagerAR : MonoBehaviour {
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Stage001");
 
             while (!asyncLoad.isDone) {
-
+ 
                 yield return null;
 
-            }
+             }
 
             CurrentState = GAME_STATE.IDLE;
 
-        }
+         }
     }
 
     //Methods  within loop
@@ -395,7 +354,7 @@ public class GameManagerAR : MonoBehaviour {
         // Add some line breaks after the initial message.
         message += "\n\n\n\n";
 
-        // Go through all the tanks and add each of their scores to the message.
+        // Go through all the Mettles and add each of their scores to the message.
         for (int i = 0; i < m_Mettles.Length; i++) {
             message += m_Mettles[i].m_ColoredPlayerText + ": " + m_Mettles[i].m_Wins + " WINS\n";
         }

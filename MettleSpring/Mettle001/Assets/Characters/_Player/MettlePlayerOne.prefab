@@ -1339,9 +1339,11 @@ GameObject:
   - component: {fileID: 82125288686876152}
   - component: {fileID: 114541425496362744}
   - component: {fileID: 114265135883051356}
-  - component: {fileID: 114781535333995172}
+  - component: {fileID: 114644441356982582}
   - component: {fileID: 114843798732357152}
   - component: {fileID: 114145854385748822}
+  - component: {fileID: 114951944403884430}
+  - component: {fileID: 114818709594118876}
   m_Layer: 0
   m_Name: MettlePlayerOne
   m_TagString: Player
@@ -2717,7 +2719,7 @@ Animator:
   m_GameObject: {fileID: 1980998867653254}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 85a6761b776984a4587f8c3b6fc1763f, type: 3}
-  m_Controller: {fileID: 9100000, guid: e2cf68ff4b1ffda45a77f7307dd789b9, type: 2}
+  m_Controller: {fileID: 9100000, guid: c16e0ed857d4a5b408c5661485ff9a99, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2825,7 +2827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StartingHealth: 100
   m_StartingStamina: 100
-  m_Slider: {fileID: 114449554055940470}
+  m_HealthSlider: {fileID: 114449554055940470}
   m_FillImage: {fileID: 114753277452859748}
   m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
   m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
@@ -2973,6 +2975,24 @@ MonoBehaviour:
   m_EngineIdling: {fileID: 8300000, guid: d1c5b647ae7c5ba4083cae5a8b4ff168, type: 3}
   m_EngineDriving: {fileID: 8300000, guid: 8d0d659d540b5264cad688f0e6bdf2ba, type: 3}
   m_PitchRange: 0.2
+--- !u!114 &114644441356982582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1980998867653254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56386f4aecb165547a40b334e41ed98d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayerNumber: 1
+  m_AttackAudio: {fileID: 82884104109604796}
+  m_WieldingClip: {fileID: 8300000, guid: 72202fb57f3f4c247828d2b34cf8590b, type: 3}
+  m_AttackClip: {fileID: 8300000, guid: fae1c5134d14aad49962d7c7459ed27b, type: 3}
+  m_MinAttackForce: 15
+  m_MaxAttackForce: 30
+  m_MaxWieldingTime: 0.75
 --- !u!114 &114753277452859748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3000,7 +3020,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 0
   m_FillOrigin: 2
---- !u!114 &114781535333995172
+--- !u!114 &114818709594118876
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -3008,16 +3028,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1980998867653254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56386f4aecb165547a40b334e41ed98d, type: 3}
+  m_Script: {fileID: 11500000, guid: 35e3a673d7d776a42a587f25d3c3dde3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerNumber: 1
-  m_AttackingAudio: {fileID: 82884104109604796}
-  m_ChargingClip: {fileID: 8300000, guid: 72202fb57f3f4c247828d2b34cf8590b, type: 3}
-  m_AttackClip: {fileID: 8300000, guid: 94573e4ec275e9142b8baeecea9afe78, type: 3}
-  m_MinAttackForce: 15
-  m_MaxAttackForce: 30
-  m_MaxChargeTime: 0.75
+  surfaceOffset: 0.01
+  currentState: 0
 --- !u!114 &114843798732357152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3053,6 +3068,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114951944403884430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1980998867653254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86efc8150056daa4693cad92eb9e4eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Opponent: EnemySword
 --- !u!136 &136152785593126278
 CapsuleCollider:
   m_ObjectHideFlags: 1
