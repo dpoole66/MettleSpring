@@ -24,7 +24,7 @@ public class MettleHealth : MonoBehaviour {
     private float m_CurrentHealth;
 
 
-    private void Awake() {
+    private void Start() {
         // Instantiate the explosion prefab and get a reference to the particle system on it.
         ParticleSystem m_ExplosionParticles = Instantiate(m_ExplosionPrefab).GetComponent<ParticleSystem>();
 
@@ -76,7 +76,7 @@ public class MettleHealth : MonoBehaviour {
         m_Dead = true;
 
         // Move the instantiated explosion prefab to the tank's position and turn it on.
-        //m_ExplosionParticles.transform.position = transform.position;
+        //m_ExplosionParticles.transform.position = this.transform.position;
         //m_ExplosionParticles.gameObject.SetActive(true);
 
         // Play the particle system of the tank exploding.
@@ -85,7 +85,7 @@ public class MettleHealth : MonoBehaviour {
         // Play the tank explosion sound effect.
         //m_ExplosionAudio.Play();
 
-        // Turn the tank off.
+        // Turn mettle off.
         gameObject.SetActive(false);
     }
 }

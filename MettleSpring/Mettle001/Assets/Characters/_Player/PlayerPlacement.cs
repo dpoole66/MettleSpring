@@ -43,8 +43,7 @@ public class PlayerPlacement : MonoBehaviour {
             var m_stageInstance = Instantiate(m_StageInstance, hit.point, Quaternion.identity);
 
             this.gameObject.SetActive(false);
-            m_GameManagerAR.StagePlaced = true;
-
+            m_GameManagerAR.StagePlaced = true;             
             Debug.Log(m_stageInstance);
 
         }

@@ -26,6 +26,7 @@ public class ClickToMove : MonoBehaviour {
         transform.position = hit.point + hit.normal * surfaceOffset;
         if ((_movePlayer != null) && (hit.transform.gameObject.tag == "Ground")) {
             _movePlayer.SendMessage("SetTarget", transform);
+
             Debug.Log(_movePlayer);
         }
     }

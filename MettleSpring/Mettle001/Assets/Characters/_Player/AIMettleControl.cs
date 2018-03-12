@@ -9,6 +9,7 @@ public class AIMettleControl : MonoBehaviour {
     public NavMeshAgent M_Agent { get; private set; }
     public PlayerStateController M_Character { get; private set; }
     private Transform target;
+    private bool stageSet;
     [HideInInspector] public GameObject m_Enemy;
     [HideInInspector] public Animator m_Anim;
     //[HideInInspector] public MettleStatus m_PlayerStats;
@@ -93,6 +94,7 @@ public class AIMettleControl : MonoBehaviour {
     public void SetTarget(Transform target) {
         this.target = target;
     }
+
 
 }
 

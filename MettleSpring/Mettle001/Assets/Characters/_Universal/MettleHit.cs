@@ -26,7 +26,7 @@ public class MettleHit : MonoBehaviour {
 
         } else {
 
-            m_MettleHealth.TakeDamage(100.0f);
+            m_MettleHealth.TakeDamage(25.0f);
 
 
         }

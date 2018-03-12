@@ -26,7 +26,7 @@ public class GameManagerAR : MonoBehaviour {
     private MettleManager m_RoundWinner;      
     private MettleManager m_GameWinner;
     public bool Starting = false;
-    public bool StagePlaced = false;
+    public bool StagePlaced = false;  
 
     [SerializeField]
     GAME_STATE currentstate = GAME_STATE.IDLE;
@@ -134,19 +134,20 @@ public class GameManagerAR : MonoBehaviour {
         while (currentstate == GAME_STATE.SETUP) {
 
             m_messageText.text = "Tap to Place Tiger";
-            Debug.Log("Game Setting Up");
+            
             m_StartButton.gameObject.SetActive(false);
             m_Icon.SetActive(false);
             m_PlaceRing.SetActive(true);
-
+            
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Stage002");
 
-            while (!asyncLoad.isDone) {
+                while (!asyncLoad.isDone) {
+                    
+                    Debug.Log("Loading");
+                    yield return null;
 
-                yield return new WaitForSeconds(3);
-                yield return null;
+                 }
 
-             }
 
             if (StagePlaced  == true) {
 
