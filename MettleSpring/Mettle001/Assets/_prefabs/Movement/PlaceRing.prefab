@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4766975767575434}
   - component: {fileID: 114489324235429122}
-  - component: {fileID: 114711697904425700}
   m_Layer: 0
   m_Name: PlaceRing
   m_TagString: PlaceRing
@@ -55,15 +54,5 @@ MonoBehaviour:
   surfaceOffset: 0.1
   m_StageInstance: {fileID: 1341717149616248, guid: 9e4921821fa26d7439085a1bc5b11cbc,
     type: 2}
-  m_GameManager: {fileID: 0}
---- !u!114 &114711697904425700
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1058666152492740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e95e33f94450b647b47a19b2215ec34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_GameManagerAR: {fileID: 0}
+  ARCamera: {fileID: 0}

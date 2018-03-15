@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1591694512166152}
+  m_IsPrefabParent: 1
+--- !u!1 &1591694512166152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4110031391780268}
+  - component: {fileID: 114246992816862206}
+  m_Layer: 0
+  m_Name: GameControllerAR
+  m_TagString: GameController
+  m_Icon: {fileID: -5765324120231101433, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4110031391780268
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591694512166152}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114246992816862206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591694512166152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6fd397e2ad1bc42bb8f70a8fe32ed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NumRoundsToWin: 3
+  m_StartDelay: 3
+  m_EndDelay: 3
+  m_messageText: {fileID: 0}
+  m_MettlePrefabs:
+  - {fileID: 1980998867653254, guid: 715f8bc253607c14db7bff6b1dc241ff, type: 2}
+  - {fileID: 1827437036863322, guid: 7ef1d7af7d70d3f49989598cc8396020, type: 2}
+  m_Mettles:
+  - m_PlayerColor: {r: 0, g: 0.17241383, b: 1, a: 0}
+    m_SpawnPoint: {fileID: 1076844127787516, guid: 9e4921821fa26d7439085a1bc5b11cbc,
+      type: 2}
+    m_MettleNumber: 0
+    m_ColoredPlayerText: 
+    m_MettleInstance: {fileID: 0}
+    m_Wins: 0
+    m_WayPointList: []
+  - m_PlayerColor: {r: 1, g: 0, b: 0, a: 0}
+    m_SpawnPoint: {fileID: 1723159414887678, guid: 9e4921821fa26d7439085a1bc5b11cbc,
+      type: 2}
+    m_MettleNumber: 0
+    m_ColoredPlayerText: 
+    m_MettleInstance: {fileID: 0}
+    m_Wins: 0
+    m_WayPointList: []
+  wayPointsForAI: []
+  m_PlaceRing: {fileID: 1058666152492740, guid: 1504a6128e02ccc458fc059723c6f92e,
+    type: 2}
+  m_GumBall: {fileID: 1127853141656354, guid: ca078a6b630979a4cbabd256d114fad8, type: 2}
+  m_StageInstance: {fileID: 1341717149616248, guid: 9e4921821fa26d7439085a1bc5b11cbc,
+    type: 2}
+  surfaceOffset: 0.1
+  ARCamera: {fileID: 0}
+  Starting: 0
+  StagePlaced: 0
+  currentstate: 0

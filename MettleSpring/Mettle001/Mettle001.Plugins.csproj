@@ -347,6 +347,11 @@
     <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\GameManagement\ARManagment\Materials\Shaders\MobileDiffuseWithLightEstimation.shader" />
+    <None Include="Assets\GameManagement\ARManagment\Materials\Shaders\MobileSpecularWithLightEstimation.shader" />
+    <None Include="Assets\GameManagement\ARManagment\Materials\Shaders\PlaneGrid.shader" />
+    <None Include="Assets\GameManagement\ARManagment\Materials\Shaders\PointCloud.shader" />
+    <None Include="Assets\GoogleARCore\SDK\Materials\ARBackground.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

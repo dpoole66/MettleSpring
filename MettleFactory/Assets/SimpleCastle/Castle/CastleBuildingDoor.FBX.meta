@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: 0a57b8c2d6435de4eac0256c512fb364
+timeCreated: 18446744011573954816
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Door
+    100004: Door 1
+    100006: Doorframe
+    100008: CastleBigColumn
+    100010: CastleBigColumn 1
+    100012: CastleBigColumn 2
+    100014: CastleBigColumn 3
+    100016: CastleBuilding 1
+    100018: CastleBuildingStairs
+    100020: DoorFrame
+    400000: //RootNode
+    400002: Door
+    400004: Door 1
+    400006: Doorframe
+    400008: CastleBigColumn
+    400010: CastleBigColumn 1
+    400012: CastleBigColumn 2
+    400014: CastleBigColumn 3
+    400016: CastleBuilding 1
+    400018: CastleBuildingStairs
+    400020: DoorFrame
+    2300000: Door
+    2300002: Door 1
+    2300004: Doorframe
+    2300006: CastleBigColumn
+    2300008: CastleBigColumn 1
+    2300010: CastleBigColumn 2
+    2300012: CastleBigColumn 3
+    2300014: CastleBuilding 1
+    2300016: CastleBuildingStairs
+    2300018: DoorFrame
+    3300000: Door
+    3300002: Door 1
+    3300004: Doorframe
+    3300006: CastleBigColumn
+    3300008: CastleBigColumn 1
+    3300010: CastleBigColumn 2
+    3300012: CastleBigColumn 3
+    3300014: CastleBuilding 1
+    3300016: CastleBuildingStairs
+    3300018: DoorFrame
+    4300000: Door
+    4300002: Door
+    4300004: Doorframe
+    4300006: CastleBuilding
+    4300008: DoorFrame
+    4300010: CastleBuildingStairs
+    4300012: CastleBigColumn
+    4300014: CastleBigColumn
+    4300016: CastleBigColumn
+    4300018: CastleBigColumn
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

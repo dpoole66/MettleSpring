@@ -317,6 +317,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GoogleARCore\SDK\Scripts\Editor\ARCoreRequiredMenuItem.cs" />
+    <Compile Include="Assets\GoogleARCore\SDK\Scripts\Editor\BuildHelper.cs" />
     <Compile Include="Assets\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs" />
     <Compile Include="Assets\NavMeshComponents\Editor\NavMeshLinkEditor.cs" />
     <Compile Include="Assets\NavMeshComponents\Editor\NavMeshModifierEditor.cs" />
@@ -324,6 +326,11 @@
     <Compile Include="Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\GameManagement\ARManagment\Materials\Shaders\MobileDiffuseWithLightEstimation.shader" />
+    <None Include="Assets\GameManagement\ARManagment\Materials\Shaders\MobileSpecularWithLightEstimation.shader" />
+    <None Include="Assets\GameManagement\ARManagment\Materials\Shaders\PlaneGrid.shader" />
+    <None Include="Assets\GameManagement\ARManagment\Materials\Shaders\PointCloud.shader" />
+    <None Include="Assets\GoogleARCore\SDK\Materials\ARBackground.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

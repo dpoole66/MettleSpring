@@ -1,0 +1,654 @@
+fileFormatVersion: 2
+guid: c1daae8e179788f4f94d0406e9fe7a6b
+timeCreated: 18446744011573954816
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Barrel
+    100002: Barrel 1
+    100004: Barrel 10
+    100006: Barrel 11
+    100008: Barrel 12
+    100010: Barrel 2
+    100012: Barrel 3
+    100014: Barrel 4
+    100016: Barrel 5
+    100018: Barrel 6
+    100020: Barrel 7
+    100022: Barrel 8
+    100024: Barrel 9
+    100026: //RootNode
+    100028: CastleBigColumn
+    100030: CastleBigColumn 1
+    100032: CastleBigColumn 2
+    100034: CastleBigColumn 3
+    100036: CastleBuilding
+    100038: CastleBuildingStairs
+    100040: CastleColumn
+    100042: CastleColumn 1
+    100044: CastleColumn 2
+    100046: CastleColumn 3
+    100048: CastleGate
+    100050: CastleGate 1
+    100052: CastleHouse
+    100054: CastleHouse 1
+    100056: CastleHouse 2
+    100058: CastleHouse 3
+    100060: CastleHouseDoor
+    100062: CastleHouseDoor 1
+    100064: CastleHouseDoor 10
+    100066: CastleHouseDoor 11
+    100068: CastleHouseDoor 12
+    100070: CastleHouseDoor 13
+    100072: CastleHouseDoor 14
+    100074: CastleHouseDoor 15
+    100076: CastleHouseDoor 16
+    100078: CastleHouseDoor 17
+    100080: CastleHouseDoor 18
+    100082: CastleHouseDoor 19
+    100084: CastleHouseDoor 2
+    100086: CastleHouseDoor 3
+    100088: CastleHouseDoor 4
+    100090: CastleHouseDoor 5
+    100092: CastleHouseDoor 6
+    100094: CastleHouseDoor 7
+    100096: CastleHouseDoor 8
+    100098: CastleHouseDoor 9
+    100100: CastleHouseStairs
+    100102: CastleHouseStairs 1
+    100104: CastleHouseStairs 2
+    100106: CastleHouseStairs 3
+    100108: CastleSquareColumn
+    100110: CastleSquareColumn 1
+    100112: CastleWall
+    100114: CastleWall 1
+    100116: CastleWall 10
+    100118: CastleWall 11
+    100120: CastleWall 12
+    100122: CastleWall 13
+    100124: CastleWall 14
+    100126: CastleWall 15
+    100128: CastleWall 16
+    100130: CastleWall 17
+    100132: CastleWall 18
+    100134: CastleWall 19
+    100136: CastleWall 2
+    100138: CastleWall 20
+    100140: CastleWall 21
+    100142: CastleWall 22
+    100144: CastleWall 23
+    100146: CastleWall 3
+    100148: CastleWall 4
+    100150: CastleWall 5
+    100152: CastleWall 6
+    100154: CastleWall 7
+    100156: CastleWall 8
+    100158: CastleWall 9
+    100160: CastleWallStairs
+    100162: CastleWallStairs 1
+    100164: CastleWallStairs 2
+    100166: CastleWallStairs 3
+    100168: Crate
+    100170: Crate 1
+    100172: Crate 10
+    100174: Crate 11
+    100176: Crate 12
+    100178: Crate 2
+    100180: Crate 3
+    100182: Crate 4
+    100184: Crate 5
+    100186: Crate 6
+    100188: Crate 7
+    100190: Crate 8
+    100192: Crate 9
+    100194: Door
+    100196: Door 1
+    100198: Door_Left
+    100200: Door_Left 1
+    100202: Door_Right
+    100204: Door_Right 1
+    100206: Doorframe
+    100208: CastleDoor
+    100210: CastleDoor 1
+    100212: CastleDoorShield
+    100214: CastleHouse02
+    100216: CastleHouse02 1
+    100218: CastleSquareColumn 2
+    100220: CastleWall 24
+    100222: CastleWall 25
+    100224: CastleWall 26
+    100226: DoorFrame
+    400000: Barrel
+    400002: Barrel 1
+    400004: Barrel 10
+    400006: Barrel 11
+    400008: Barrel 12
+    400010: Barrel 2
+    400012: Barrel 3
+    400014: Barrel 4
+    400016: Barrel 5
+    400018: Barrel 6
+    400020: Barrel 7
+    400022: Barrel 8
+    400024: Barrel 9
+    400026: //RootNode
+    400028: CastleBigColumn
+    400030: CastleBigColumn 1
+    400032: CastleBigColumn 2
+    400034: CastleBigColumn 3
+    400036: CastleBuilding
+    400038: CastleBuildingStairs
+    400040: CastleColumn
+    400042: CastleColumn 1
+    400044: CastleColumn 2
+    400046: CastleColumn 3
+    400048: CastleGate
+    400050: CastleGate 1
+    400052: CastleHouse
+    400054: CastleHouse 1
+    400056: CastleHouse 2
+    400058: CastleHouse 3
+    400060: CastleHouseDoor
+    400062: CastleHouseDoor 1
+    400064: CastleHouseDoor 10
+    400066: CastleHouseDoor 11
+    400068: CastleHouseDoor 12
+    400070: CastleHouseDoor 13
+    400072: CastleHouseDoor 14
+    400074: CastleHouseDoor 15
+    400076: CastleHouseDoor 16
+    400078: CastleHouseDoor 17
+    400080: CastleHouseDoor 18
+    400082: CastleHouseDoor 19
+    400084: CastleHouseDoor 2
+    400086: CastleHouseDoor 3
+    400088: CastleHouseDoor 4
+    400090: CastleHouseDoor 5
+    400092: CastleHouseDoor 6
+    400094: CastleHouseDoor 7
+    400096: CastleHouseDoor 8
+    400098: CastleHouseDoor 9
+    400100: CastleHouseStairs
+    400102: CastleHouseStairs 1
+    400104: CastleHouseStairs 2
+    400106: CastleHouseStairs 3
+    400108: CastleSquareColumn
+    400110: CastleSquareColumn 1
+    400112: CastleWall
+    400114: CastleWall 1
+    400116: CastleWall 10
+    400118: CastleWall 11
+    400120: CastleWall 12
+    400122: CastleWall 13
+    400124: CastleWall 14
+    400126: CastleWall 15
+    400128: CastleWall 16
+    400130: CastleWall 17
+    400132: CastleWall 18
+    400134: CastleWall 19
+    400136: CastleWall 2
+    400138: CastleWall 20
+    400140: CastleWall 21
+    400142: CastleWall 22
+    400144: CastleWall 23
+    400146: CastleWall 3
+    400148: CastleWall 4
+    400150: CastleWall 5
+    400152: CastleWall 6
+    400154: CastleWall 7
+    400156: CastleWall 8
+    400158: CastleWall 9
+    400160: CastleWallStairs
+    400162: CastleWallStairs 1
+    400164: CastleWallStairs 2
+    400166: CastleWallStairs 3
+    400168: Crate
+    400170: Crate 1
+    400172: Crate 10
+    400174: Crate 11
+    400176: Crate 12
+    400178: Crate 2
+    400180: Crate 3
+    400182: Crate 4
+    400184: Crate 5
+    400186: Crate 6
+    400188: Crate 7
+    400190: Crate 8
+    400192: Crate 9
+    400194: Door
+    400196: Door 1
+    400198: Door_Left
+    400200: Door_Left 1
+    400202: Door_Right
+    400204: Door_Right 1
+    400206: Doorframe
+    400208: CastleDoor
+    400210: CastleDoor 1
+    400212: CastleDoorShield
+    400214: CastleHouse02
+    400216: CastleHouse02 1
+    400218: CastleSquareColumn 2
+    400220: CastleWall 24
+    400222: CastleWall 25
+    400224: CastleWall 26
+    400226: DoorFrame
+    2300000: Barrel
+    2300002: Barrel 1
+    2300004: Barrel 10
+    2300006: Barrel 11
+    2300008: Barrel 12
+    2300010: Barrel 2
+    2300012: Barrel 3
+    2300014: Barrel 4
+    2300016: Barrel 5
+    2300018: Barrel 6
+    2300020: Barrel 7
+    2300022: Barrel 8
+    2300024: Barrel 9
+    2300026: CastleBigColumn
+    2300028: CastleBigColumn 1
+    2300030: CastleBigColumn 2
+    2300032: CastleBigColumn 3
+    2300034: CastleBuilding
+    2300036: CastleBuildingStairs
+    2300038: CastleColumn
+    2300040: CastleColumn 1
+    2300042: CastleColumn 2
+    2300044: CastleColumn 3
+    2300046: CastleGate
+    2300048: CastleGate 1
+    2300050: CastleHouse
+    2300052: CastleHouse 1
+    2300054: CastleHouse 2
+    2300056: CastleHouse 3
+    2300058: CastleHouseDoor
+    2300060: CastleHouseDoor 1
+    2300062: CastleHouseDoor 10
+    2300064: CastleHouseDoor 11
+    2300066: CastleHouseDoor 12
+    2300068: CastleHouseDoor 13
+    2300070: CastleHouseDoor 14
+    2300072: CastleHouseDoor 15
+    2300074: CastleHouseDoor 16
+    2300076: CastleHouseDoor 17
+    2300078: CastleHouseDoor 18
+    2300080: CastleHouseDoor 19
+    2300082: CastleHouseDoor 2
+    2300084: CastleHouseDoor 3
+    2300086: CastleHouseDoor 4
+    2300088: CastleHouseDoor 5
+    2300090: CastleHouseDoor 6
+    2300092: CastleHouseDoor 7
+    2300094: CastleHouseDoor 8
+    2300096: CastleHouseDoor 9
+    2300098: CastleHouseStairs
+    2300100: CastleHouseStairs 1
+    2300102: CastleHouseStairs 2
+    2300104: CastleHouseStairs 3
+    2300106: CastleSquareColumn
+    2300108: CastleSquareColumn 1
+    2300110: CastleWall
+    2300112: CastleWall 1
+    2300114: CastleWall 10
+    2300116: CastleWall 11
+    2300118: CastleWall 12
+    2300120: CastleWall 13
+    2300122: CastleWall 14
+    2300124: CastleWall 15
+    2300126: CastleWall 16
+    2300128: CastleWall 17
+    2300130: CastleWall 18
+    2300132: CastleWall 19
+    2300134: CastleWall 2
+    2300136: CastleWall 20
+    2300138: CastleWall 21
+    2300140: CastleWall 22
+    2300142: CastleWall 23
+    2300144: CastleWall 3
+    2300146: CastleWall 4
+    2300148: CastleWall 5
+    2300150: CastleWall 6
+    2300152: CastleWall 7
+    2300154: CastleWall 8
+    2300156: CastleWall 9
+    2300158: CastleWallStairs
+    2300160: CastleWallStairs 1
+    2300162: CastleWallStairs 2
+    2300164: CastleWallStairs 3
+    2300166: Crate
+    2300168: Crate 1
+    2300170: Crate 10
+    2300172: Crate 11
+    2300174: Crate 12
+    2300176: Crate 2
+    2300178: Crate 3
+    2300180: Crate 4
+    2300182: Crate 5
+    2300184: Crate 6
+    2300186: Crate 7
+    2300188: Crate 8
+    2300190: Crate 9
+    2300192: Door
+    2300194: Door 1
+    2300196: Door_Left
+    2300198: Door_Left 1
+    2300200: Door_Right
+    2300202: Door_Right 1
+    2300204: Doorframe
+    2300206: CastleDoor
+    2300208: CastleDoor 1
+    2300210: CastleDoorShield
+    2300212: CastleHouse02
+    2300214: CastleHouse02 1
+    2300216: CastleSquareColumn 2
+    2300218: CastleWall 24
+    2300220: CastleWall 25
+    2300222: CastleWall 26
+    2300224: DoorFrame
+    3300000: Barrel
+    3300002: Barrel 1
+    3300004: Barrel 10
+    3300006: Barrel 11
+    3300008: Barrel 12
+    3300010: Barrel 2
+    3300012: Barrel 3
+    3300014: Barrel 4
+    3300016: Barrel 5
+    3300018: Barrel 6
+    3300020: Barrel 7
+    3300022: Barrel 8
+    3300024: Barrel 9
+    3300026: CastleBigColumn
+    3300028: CastleBigColumn 1
+    3300030: CastleBigColumn 2
+    3300032: CastleBigColumn 3
+    3300034: CastleBuilding
+    3300036: CastleBuildingStairs
+    3300038: CastleColumn
+    3300040: CastleColumn 1
+    3300042: CastleColumn 2
+    3300044: CastleColumn 3
+    3300046: CastleGate
+    3300048: CastleGate 1
+    3300050: CastleHouse
+    3300052: CastleHouse 1
+    3300054: CastleHouse 2
+    3300056: CastleHouse 3
+    3300058: CastleHouseDoor
+    3300060: CastleHouseDoor 1
+    3300062: CastleHouseDoor 10
+    3300064: CastleHouseDoor 11
+    3300066: CastleHouseDoor 12
+    3300068: CastleHouseDoor 13
+    3300070: CastleHouseDoor 14
+    3300072: CastleHouseDoor 15
+    3300074: CastleHouseDoor 16
+    3300076: CastleHouseDoor 17
+    3300078: CastleHouseDoor 18
+    3300080: CastleHouseDoor 19
+    3300082: CastleHouseDoor 2
+    3300084: CastleHouseDoor 3
+    3300086: CastleHouseDoor 4
+    3300088: CastleHouseDoor 5
+    3300090: CastleHouseDoor 6
+    3300092: CastleHouseDoor 7
+    3300094: CastleHouseDoor 8
+    3300096: CastleHouseDoor 9
+    3300098: CastleHouseStairs
+    3300100: CastleHouseStairs 1
+    3300102: CastleHouseStairs 2
+    3300104: CastleHouseStairs 3
+    3300106: CastleSquareColumn
+    3300108: CastleSquareColumn 1
+    3300110: CastleWall
+    3300112: CastleWall 1
+    3300114: CastleWall 10
+    3300116: CastleWall 11
+    3300118: CastleWall 12
+    3300120: CastleWall 13
+    3300122: CastleWall 14
+    3300124: CastleWall 15
+    3300126: CastleWall 16
+    3300128: CastleWall 17
+    3300130: CastleWall 18
+    3300132: CastleWall 19
+    3300134: CastleWall 2
+    3300136: CastleWall 20
+    3300138: CastleWall 21
+    3300140: CastleWall 22
+    3300142: CastleWall 23
+    3300144: CastleWall 3
+    3300146: CastleWall 4
+    3300148: CastleWall 5
+    3300150: CastleWall 6
+    3300152: CastleWall 7
+    3300154: CastleWall 8
+    3300156: CastleWall 9
+    3300158: CastleWallStairs
+    3300160: CastleWallStairs 1
+    3300162: CastleWallStairs 2
+    3300164: CastleWallStairs 3
+    3300166: Crate
+    3300168: Crate 1
+    3300170: Crate 10
+    3300172: Crate 11
+    3300174: Crate 12
+    3300176: Crate 2
+    3300178: Crate 3
+    3300180: Crate 4
+    3300182: Crate 5
+    3300184: Crate 6
+    3300186: Crate 7
+    3300188: Crate 8
+    3300190: Crate 9
+    3300192: Door
+    3300194: Door 1
+    3300196: Door_Left
+    3300198: Door_Left 1
+    3300200: Door_Right
+    3300202: Door_Right 1
+    3300204: Doorframe
+    3300206: CastleDoor
+    3300208: CastleDoor 1
+    3300210: CastleDoorShield
+    3300212: CastleHouse02
+    3300214: CastleHouse02 1
+    3300216: CastleSquareColumn 2
+    3300218: CastleWall 24
+    3300220: CastleWall 25
+    3300222: CastleWall 26
+    3300224: DoorFrame
+    4300000: CastleBuildingStairs
+    4300002: CastleColumn
+    4300004: CastleBuilding
+    4300006: CastleWall
+    4300008: Door_Left
+    4300010: Door_Right
+    4300012: CastleWallStairs
+    4300014: Door
+    4300016: Door
+    4300018: Doorframe
+    4300020: CastleGate
+    4300022: CastleBigColumn
+    4300024: CastleWall
+    4300026: CastleHouseDoor
+    4300028: CastleWall
+    4300030: CastleWall
+    4300032: CastleWall
+    4300034: CastleWall
+    4300036: CastleSquareColumn
+    4300038: CastleWall
+    4300040: CastleWall
+    4300042: CastleWall
+    4300044: CastleWall
+    4300046: CastleHouse
+    4300048: CastleHouseDoor
+    4300050: CastleHouseStairs
+    4300052: CastleHouse
+    4300054: CastleHouseDoor
+    4300056: CastleHouseStairs
+    4300058: CastleHouseDoor
+    4300060: CastleHouseDoor
+    4300062: CastleColumn
+    4300064: CastleWallStairs
+    4300066: CastleWall
+    4300068: CastleWall
+    4300070: CastleHouseDoor
+    4300072: CastleColumn
+    4300074: CastleWall
+    4300076: CastleHouseDoor
+    4300078: CastleWall
+    4300080: CastleWall
+    4300082: CastleWallStairs
+    4300084: CastleSquareColumn
+    4300086: CastleWall
+    4300088: CastleWall
+    4300090: CastleHouseDoor
+    4300092: CastleWall
+    4300094: CastleWall
+    4300096: CastleWall
+    4300098: CastleColumn
+    4300100: CastleWallStairs
+    4300102: CastleHouseDoor
+    4300104: CastleHouseDoor
+    4300106: CastleHouseDoor
+    4300108: CastleHouseDoor
+    4300110: CastleHouseDoor
+    4300112: CastleWall
+    4300114: CastleWall
+    4300116: CastleWall
+    4300118: CastleWall
+    4300120: Door_Left
+    4300122: Door_Right
+    4300124: CastleHouseDoor
+    4300126: CastleHouseDoor
+    4300128: CastleGate
+    4300130: CastleHouseDoor
+    4300132: CastleHouseStairs
+    4300134: CastleHouse
+    4300136: CastleHouseDoor
+    4300138: CastleHouseStairs
+    4300140: CastleHouse
+    4300142: CastleHouseDoor
+    4300144: CastleBigColumn
+    4300146: CastleBigColumn
+    4300148: CastleBigColumn
+    4300150: CastleHouseDoor
+    4300152: CastleHouseDoor
+    4300154: Crate
+    4300156: Barrel
+    4300158: Crate
+    4300160: Crate
+    4300162: Barrel
+    4300164: Barrel
+    4300166: Barrel
+    4300168: Crate
+    4300170: Barrel
+    4300172: Crate
+    4300174: Crate
+    4300176: Barrel
+    4300178: Barrel
+    4300180: Crate
+    4300182: Crate
+    4300184: Barrel
+    4300186: Barrel
+    4300188: Crate
+    4300190: Barrel
+    4300192: Barrel
+    4300194: Crate
+    4300196: Crate
+    4300198: Barrel
+    4300200: Crate
+    4300202: Crate
+    4300204: Barrel
+    4300206: CastleHouse02
+    4300208: CastleDoorShield
+    4300210: CastleDoor
+    4300212: CastleDoor
+    4300214: CastleHouse02
+    4300216: CastleSquareColumn
+    4300218: CastleWall
+    4300220: CastleWall
+    4300222: DoorFrame
+    4300224: CastleWall
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
