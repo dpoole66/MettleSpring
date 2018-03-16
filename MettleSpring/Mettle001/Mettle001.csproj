@@ -346,6 +346,7 @@
     <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\SimpleChannel.cs" />
     <Compile Include="Assets\EnemyUI.cs" />
     <Compile Include="Assets\GameManagement\ARManagment\Scripts\ARController.cs" />
+    <Compile Include="Assets\GameManagement\ARManagment\Scripts\HelloARController2.cs" />
     <Compile Include="Assets\GameManagement\ARManagment\Scripts\PointcloudVisualizer.cs" />
     <Compile Include="Assets\GameManagement\ARManagment\Scripts\TrackedPlaneVisualizer.cs" />
     <Compile Include="Assets\GameManagement\EnemyController\EnemyStats.cs" />

@@ -23,9 +23,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_scenes/Stage006.unity
     guid: ecbc1c2891fd503489358f71319b8912
-  - enabled: 1
+  - enabled: 0
     path: Assets/_scenes/ARStage.unity
     guid: 0e27d78481e133b438d14b9b0366aea1
-  - enabled: 1
+  - enabled: 0
     path: Assets/_scenes/StartStage.unity
     guid: f3fad73b64d959f42bca7b90ade23daa
+  - enabled: 0
+    path: Assets/_scenes/Start.unity
+    guid: 9ba0dd771b6e9f04bbe78d2f0f230535
+  - enabled: 0
+    path: Assets/_scenes/Max.unity
+    guid: 0d39144647d45434c8dc4a8adcbbda94
+  - enabled: 1
+    path: Assets/_scenes/Table.unity
+    guid: 0fcc833b76ddcee409a018373b976c2d
